@@ -11,8 +11,8 @@ export interface TeamTableProps {
   players: FootballPlayer[];
 }
 
-const TeamTable: SFC<TeamTableProps> = (props) => {
-  return(
+const TeamTable: SFC<TeamTableProps> = props => {
+  return (
     <Paper>
       <Table>
         <TableHead>
@@ -22,20 +22,20 @@ const TeamTable: SFC<TeamTableProps> = (props) => {
             <TableCell>Team</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-          {props.players.map(renderPlayerRow)}
-        </TableBody>
+        <TableBody>{props.players.map(renderPlayerRow)}</TableBody>
       </Table>
     </Paper>
   );
 };
 
 const renderPlayerRow = (player: FootballPlayer) => (
-<TableRow key={player.id}>
-              <TableCell component="th" scope="row">{player.position}</TableCell>
-              <TableCell>{player.name}</TableCell>
-              <TableCell>{player.team}</TableCell>
-            </TableRow>
+  <TableRow key={player.id}>
+    <TableCell component="th" scope="row">
+      {player.position}
+    </TableCell>
+    <TableCell>{player.name}</TableCell>
+    <TableCell>{player.team}</TableCell>
+  </TableRow>
 );
 
 export default TeamTable;
