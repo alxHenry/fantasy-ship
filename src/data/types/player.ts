@@ -1,4 +1,5 @@
 interface BasePlayer {
+  id: string;
   name: string;
 }
 
@@ -11,4 +12,4 @@ export type PlayerPosition = FootballPlayerPosition;
 export type FootballPlayerPosition = 'QB' | 'RB' | 'WR' | 'TE' | 'D/ST' | 'K' | 'FLEX' | 'OP';
 
 export type PlayerTeam = FootballTeam;
-export type FootballTeam = 'NYG' | 'NYJ';
+export type FootballTeam = 'NYG' | 'NYJ' | 'PIT';
